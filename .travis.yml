@@ -2,13 +2,12 @@ sudo: required
 dist: trusty
 language: node_js
 
-services: 
+services:
   - docker
 
-before_script: 
-  - npm install 
-script: 
-  - npm-test
+before_script:
+  - npm install
+script:
   - docker build -t app
 
 after_success:
