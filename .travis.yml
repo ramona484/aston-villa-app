@@ -10,7 +10,7 @@ services:
 before_script:
   - npm install
 script:
-  - docker build -t app
+  - docker build -t app .
 
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
